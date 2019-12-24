@@ -10,7 +10,7 @@ public class Member {
     }
 
     public int getId() {
-        return id + 1;
+        return id;
     }
 
     public void setId(int id) {

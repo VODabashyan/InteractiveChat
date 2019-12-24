@@ -12,7 +12,7 @@ public class Main {
 
         ArrayList<Member> memberList = new ArrayList<>();
         for (int i = 0; i < chatMembers; i++) {
-            memberList.add(new Member(i));
+            memberList.add(new Member(i + 1));
         }
 
         int command;
