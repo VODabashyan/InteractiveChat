@@ -2,32 +2,23 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class Member {
-    private int id;
-    private boolean isActive = true;
+    private String name;
 
-    public Member(int id) {
-        this.id = id;
+    public Member(String name) {
+        this.name = name;
     }
 
-    public int getId() {
-        return id;
+    public String getName() {
+        return name;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public boolean isActive() {
-        return isActive;
-    }
-
-    public void setActive(boolean active) {
-        isActive = active;
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
     public String toString() {
         String sysTime = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss").format(Calendar.getInstance().getTime());
-        return sysTime + " member" + getId() + ": ";
+        return sysTime + " " + getName() + ": ";
     }
 }
