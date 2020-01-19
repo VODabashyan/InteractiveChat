@@ -25,7 +25,7 @@ public class Main {
             memberList.add(member);
         }
 
-        int command;
+        String command;
         String message;
         Scanner messageScanner = new Scanner(System.in);
 
@@ -33,16 +33,16 @@ public class Main {
             Random r = new Random();
             Member selectedMember = memberList.get(r.nextInt(memberList.size()));
             System.out.print(selectedMember.getName() + ", please enter 1 to send a message or 2 to exit: ");
-            command = numberScanner.nextInt();
+            command = numberScanner.nextLine();
 
             switch (command) {
-                case 1:
+                case "1":
                     System.out.println(selectedMember.getName() + " is typing...");
                     message = messageScanner.nextLine();
                     System.out.println(selectedMember.getName() + ": " + message);
                     break;
 
-                case 2:
+                case "2":
                     System.out.println(selectedMember.getName() + " has left the chat.");
                     for (int i = 0; i < memberList.size(); i++) {
                         if (memberList.get(i).getName() == selectedMember.getName()) {
