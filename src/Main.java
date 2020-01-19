@@ -33,7 +33,7 @@ public class Main {
             Random r = new Random();
             Member selectedMember = memberList.get(r.nextInt(memberList.size()));
             System.out.print(selectedMember.getName() + ", please enter 1 to send a message or 2 to exit: ");
-            command = numberScanner.nextLine();
+            command = numberScanner.next();
 
             switch (command) {
                 case "1":
